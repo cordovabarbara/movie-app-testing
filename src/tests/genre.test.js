@@ -28,7 +28,7 @@ test("GET -> 'BASE_URL', should return status code 200 and res.body.length ==== 
 })
 
 
-test("PUT 'BASE_URL', should return status code 200 and res.body.name ==== body.name", async()=>{ 
+test("PUT 'BASE_URL/:id', should return status code 200 and res.body.name === body.name", async()=>{ 
     const genre = {
         name: "Fantasy"
     }
@@ -42,7 +42,7 @@ test("PUT 'BASE_URL', should return status code 200 and res.body.name ==== body.
 
 })
 
-test("DELETE 'BASE_URL', should return status code 204", async()=>{ 
+test("DELETE 'BASE_URL/:id', should return status code 204", async()=>{ 
     const res = await request(app)
         .delete(`${BASE_URL}/${genreId}`)
 
