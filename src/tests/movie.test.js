@@ -48,6 +48,7 @@ test("PUT => 'BASE_URL/:id', should return 200 and res.body.name = body.name", a
 });
 
 
+//movies/:id/actors
 test("POST BASE_URL/:id/actors => , should return 200 and res.body.length = 1", async () => {
   
     const actorbody = {
@@ -70,7 +71,7 @@ test("POST BASE_URL/:id/actors => , should return 200 and res.body.length = 1", 
   actor.destroy();
 });
 
-
+//movies/:id/directors
 test("POST BASE_URL/:id/directors => should return 200 and res.body.name = director.name", async () => {
   
     const directorBody = {
@@ -95,6 +96,7 @@ test("POST BASE_URL/:id/directors => should return 200 and res.body.name = direc
 });
 
 
+//movies/:id/genres
 test("POST BASE_URL/:id/genres => should return 200 and res.body.length = 1", async () => {
     const genreBody = {
       name: "Action",
@@ -110,6 +112,7 @@ test("POST BASE_URL/:id/genres => should return 200 and res.body.length = 1", as
 
     genre.destroy();
   });
+
 
 test("DELETE 'BASE_URL/:id', should return status code 204", async()=>{ 
     const res = await request(app)
