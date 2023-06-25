@@ -23,7 +23,7 @@ test ("POST -> 'BASE_URL', should return status code 201", async() =>{
     expect(res.body.firstName).toBe(director.firstName)
 })
 
-test("GET -> 'BASE_URL', should return status code 200 and res.body.length ==== 1", async()=>{
+test("GET -> 'BASE_URL', should return status code 200 and res.body.length = 1", async()=>{
     const res = await request(app)
     .get(BASE_URL)
 
@@ -34,7 +34,7 @@ test("GET -> 'BASE_URL', should return status code 200 and res.body.length ==== 
 })
 
 
-test("PUT 'BASE_URL/:id', should return status code 200 and res.body.firstName === body.firstName", async()=>{ 
+test("PUT 'BASE_URL/:id', should return status code 200 and res.body.firstName = body.firstName", async()=>{ 
     const director = {
         firstName: "Lana"
     }

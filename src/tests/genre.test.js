@@ -19,7 +19,7 @@ test ("POST -> 'BASE_URL', should return status code 201", async() =>{
     expect(res.body.name).toBe(genre.name)
 })
 
-test("GET -> 'BASE_URL', should return status code 200 and res.body.length ==== 1", async()=>{
+test("GET -> 'BASE_URL', should return status code 200 and res.body.length = 1", async()=>{
     const res = await request(app)
     .get(BASE_URL)
 
@@ -28,7 +28,7 @@ test("GET -> 'BASE_URL', should return status code 200 and res.body.length ==== 
 })
 
 
-test("PUT 'BASE_URL/:id', should return status code 200 and res.body.name === body.name", async()=>{ 
+test("PUT 'BASE_URL/:id', should return status code 200 and res.body.name = body.name", async()=>{ 
     const genre = {
         name: "Fantasy"
     }
